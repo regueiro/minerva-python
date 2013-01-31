@@ -1,0 +1,4 @@
+
+pyside-uic mainwindow.ui -o ui_mainwindow.py
+
+c:\Python33\Lib\site-packages\PySide\pyside-rcc.exe -py3 ..\images\icons.qrc -o icons_rc.py
