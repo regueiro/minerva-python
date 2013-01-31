@@ -1,0 +1,6 @@
+Minerva source code not yet licensed. Copyright (c) 2013 Santiago Regueiro
+
+
+Icons created by Fatcow Web Hosting (http://www.fatcow.com/free-icons) and used under the Creative Commons CC BY 3.0 US license
+
+Qt licensed under the GNU Lesser General Public License version 2.1
