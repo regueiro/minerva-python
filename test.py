@@ -1,4 +1,5 @@
 #!usr/bin/env python
+
 """
 folder scanning tests
 
@@ -21,5 +22,3 @@ showlist = folder_manager.movie_list
 art_manager = LocalArtworkManager()
 for movie in showlist:
     art_manager.find_local_movie_artwork(movie)
-
-pass

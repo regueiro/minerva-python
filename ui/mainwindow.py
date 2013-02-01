@@ -1,6 +1,5 @@
 """
-    Qt Main Window for Minerva
-
+Qt Main Window for Minerva
 
 """
 import os

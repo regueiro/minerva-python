@@ -1,4 +1,5 @@
 #!usr/bin/env python
+
 """
 Minerva - An artwork manager for the XBMC Media Center
 
