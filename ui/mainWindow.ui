@@ -7,7 +7,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1246</width>
+    <width>1134</width>
     <height>884</height>
    </rect>
   </property>
@@ -40,7 +40,7 @@
        <number>0</number>
       </property>
       <widget class="QWidget" name="page">
-       <layout class="QVBoxLayout" name="verticalLayout_8">
+       <layout class="QHBoxLayout" name="horizontalLayout_5">
         <item>
          <widget class="QSplitter" name="splitter">
           <property name="orientation">
@@ -86,6 +86,9 @@
                 <height>0</height>
                </size>
               </property>
+              <property name="editTriggers">
+               <set>QAbstractItemView::NoEditTriggers</set>
+              </property>
              </widget>
             </item>
            </layout>
@@ -129,7 +132,7 @@
                  <enum>QTabWidget::Rounded</enum>
                 </property>
                 <property name="currentIndex">
-                 <number>0</number>
+                 <number>2</number>
                 </property>
                 <widget class="QWidget" name="tab">
                  <attribute name="title">
@@ -789,7 +792,352 @@
         </item>
        </layout>
       </widget>
-      <widget class="QWidget" name="page_2"/>
+      <widget class="QWidget" name="page_3">
+       <layout class="QHBoxLayout" name="horizontalLayout_6">
+        <item>
+         <widget class="QSplitter" name="splitter_2">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="childrenCollapsible">
+           <bool>false</bool>
+          </property>
+          <widget class="QFrame" name="frame_15">
+           <property name="minimumSize">
+            <size>
+             <width>200</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="baseSize">
+            <size>
+             <width>300</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::NoFrame</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Raised</enum>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_22">
+            <property name="rightMargin">
+             <number>5</number>
+            </property>
+            <item>
+             <widget class="QListView" name="movieList">
+              <property name="minimumSize">
+               <size>
+                <width>150</width>
+                <height>0</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QFrame" name="frame_16">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+             <horstretch>1</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::NoFrame</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Raised</enum>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_23">
+            <property name="leftMargin">
+             <number>4</number>
+            </property>
+            <item>
+             <widget class="QLabel" name="movieOverviewName">
+              <property name="font">
+               <font>
+                <pointsize>20</pointsize>
+                <weight>75</weight>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="text">
+               <string>Movie Name</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <layout class="QGridLayout" name="gridLayout_2">
+              <item row="0" column="0">
+               <widget class="QTabWidget" name="tabWidget_2">
+                <property name="tabShape">
+                 <enum>QTabWidget::Rounded</enum>
+                </property>
+                <property name="currentIndex">
+                 <number>0</number>
+                </property>
+                <widget class="QWidget" name="tab_11">
+                 <attribute name="title">
+                  <string>Overview</string>
+                 </attribute>
+                 <layout class="QVBoxLayout" name="verticalLayout_24">
+                  <property name="spacing">
+                   <number>0</number>
+                  </property>
+                  <item>
+                   <widget class="QFrame" name="frame_17">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
+                    <property name="frameShape">
+                     <enum>QFrame::NoFrame</enum>
+                    </property>
+                    <property name="frameShadow">
+                     <enum>QFrame::Raised</enum>
+                    </property>
+                    <layout class="QHBoxLayout" name="horizontalLayout_3">
+                     <property name="bottomMargin">
+                      <number>3</number>
+                     </property>
+                     <item>
+                      <widget class="QFrame" name="frame_18">
+                       <property name="frameShape">
+                        <enum>QFrame::NoFrame</enum>
+                       </property>
+                       <property name="frameShadow">
+                        <enum>QFrame::Raised</enum>
+                       </property>
+                       <layout class="QHBoxLayout" name="horizontalLayout_4">
+                        <item>
+                         <widget class="QFrame" name="frame_19">
+                          <property name="frameShape">
+                           <enum>QFrame::NoFrame</enum>
+                          </property>
+                          <property name="frameShadow">
+                           <enum>QFrame::Raised</enum>
+                          </property>
+                          <layout class="QVBoxLayout" name="verticalLayout_25">
+                           <item>
+                            <widget class="QLabel" name="label_16">
+                             <property name="sizePolicy">
+                              <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                               <horstretch>0</horstretch>
+                               <verstretch>0</verstretch>
+                              </sizepolicy>
+                             </property>
+                             <property name="text">
+                              <string>Banner</string>
+                             </property>
+                            </widget>
+                           </item>
+                           <item>
+                            <widget class="QFrame" name="frame_20">
+                             <property name="sizePolicy">
+                              <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                               <horstretch>0</horstretch>
+                               <verstretch>0</verstretch>
+                              </sizepolicy>
+                             </property>
+                             <property name="minimumSize">
+                              <size>
+                               <width>0</width>
+                               <height>100</height>
+                              </size>
+                             </property>
+                             <property name="baseSize">
+                              <size>
+                               <width>0</width>
+                               <height>100</height>
+                              </size>
+                             </property>
+                             <property name="frameShape">
+                              <enum>QFrame::StyledPanel</enum>
+                             </property>
+                             <property name="frameShadow">
+                              <enum>QFrame::Plain</enum>
+                             </property>
+                             <property name="lineWidth">
+                              <number>1</number>
+                             </property>
+                             <layout class="QVBoxLayout" name="verticalLayout_26">
+                              <item>
+                               <widget class="ImageLabel" name="movieOverviewBanner">
+                                <property name="sizePolicy">
+                                 <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
+                                  <horstretch>0</horstretch>
+                                  <verstretch>0</verstretch>
+                                 </sizepolicy>
+                                </property>
+                                <property name="alignment">
+                                 <set>Qt::AlignCenter</set>
+                                </property>
+                               </widget>
+                              </item>
+                             </layout>
+                            </widget>
+                           </item>
+                          </layout>
+                         </widget>
+                        </item>
+                       </layout>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QFrame" name="frame_23">
+                    <property name="frameShape">
+                     <enum>QFrame::NoFrame</enum>
+                    </property>
+                    <property name="frameShadow">
+                     <enum>QFrame::Raised</enum>
+                    </property>
+                    <layout class="QGridLayout" name="gridLayout_5">
+                     <property name="topMargin">
+                      <number>3</number>
+                     </property>
+                     <item row="0" column="0">
+                      <widget class="QLabel" name="label_12">
+                       <property name="sizePolicy">
+                        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                         <horstretch>0</horstretch>
+                         <verstretch>0</verstretch>
+                        </sizepolicy>
+                       </property>
+                       <property name="text">
+                        <string>Fanart</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="1">
+                      <widget class="QLabel" name="label_18">
+                       <property name="sizePolicy">
+                        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                         <horstretch>0</horstretch>
+                         <verstretch>0</verstretch>
+                        </sizepolicy>
+                       </property>
+                       <property name="text">
+                        <string>Poster</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="1">
+                      <widget class="QFrame" name="frame_27">
+                       <property name="sizePolicy">
+                        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                         <horstretch>0</horstretch>
+                         <verstretch>0</verstretch>
+                        </sizepolicy>
+                       </property>
+                       <property name="frameShape">
+                        <enum>QFrame::StyledPanel</enum>
+                       </property>
+                       <property name="frameShadow">
+                        <enum>QFrame::Plain</enum>
+                       </property>
+                       <property name="lineWidth">
+                        <number>1</number>
+                       </property>
+                       <layout class="QVBoxLayout" name="verticalLayout_32">
+                        <item>
+                         <widget class="ImageLabel" name="movieOverviewPoster">
+                          <property name="sizePolicy">
+                           <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
+                           </sizepolicy>
+                          </property>
+                          <property name="text">
+                           <string/>
+                          </property>
+                          <property name="alignment">
+                           <set>Qt::AlignCenter</set>
+                          </property>
+                         </widget>
+                        </item>
+                       </layout>
+                      </widget>
+                     </item>
+                     <item row="1" column="0">
+                      <widget class="QFrame" name="frame_26">
+                       <property name="sizePolicy">
+                        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                         <horstretch>0</horstretch>
+                         <verstretch>0</verstretch>
+                        </sizepolicy>
+                       </property>
+                       <property name="frameShape">
+                        <enum>QFrame::StyledPanel</enum>
+                       </property>
+                       <property name="frameShadow">
+                        <enum>QFrame::Plain</enum>
+                       </property>
+                       <property name="lineWidth">
+                        <number>1</number>
+                       </property>
+                       <layout class="QVBoxLayout" name="verticalLayout_31">
+                        <item>
+                         <widget class="ImageLabel" name="movieOverviewFanart">
+                          <property name="sizePolicy">
+                           <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
+                           </sizepolicy>
+                          </property>
+                          <property name="text">
+                           <string/>
+                          </property>
+                          <property name="alignment">
+                           <set>Qt::AlignCenter</set>
+                          </property>
+                         </widget>
+                        </item>
+                       </layout>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+                <widget class="QWidget" name="tab_12">
+                 <attribute name="title">
+                  <string>Banner</string>
+                 </attribute>
+                </widget>
+                <widget class="QWidget" name="tab_13">
+                 <attribute name="title">
+                  <string>Fanart</string>
+                 </attribute>
+                </widget>
+                <widget class="QWidget" name="tab_14">
+                 <attribute name="title">
+                  <string>Poster</string>
+                 </attribute>
+                </widget>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
      </widget>
     </item>
    </layout>
@@ -799,7 +1147,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1246</width>
+     <width>1134</width>
      <height>21</height>
     </rect>
    </property>
@@ -822,11 +1170,14 @@
    <attribute name="toolBarBreak">
     <bool>false</bool>
    </attribute>
+   <addaction name="actionMovies"/>
+   <addaction name="actionTvShows"/>
+   <addaction name="actionScanMovies"/>
    <addaction name="actionScan"/>
   </widget>
   <action name="actionScan">
    <property name="icon">
-    <iconset resource="images/icons.qrc">
+    <iconset resource="../images/icons.qrc">
      <normaloff>:/scanIcon/icons/fatcow/32x32/open_folder.png</normaloff>:/scanIcon/icons/fatcow/32x32/open_folder.png</iconset>
    </property>
    <property name="text">
@@ -841,16 +1192,52 @@
     <string>Quit</string>
    </property>
   </action>
+  <action name="actionScanMovies">
+   <property name="icon">
+    <iconset resource="../images/icons.qrc">
+     <normaloff>:/scanIcon/icons/fatcow/32x32/open_folder.png</normaloff>:/scanIcon/icons/fatcow/32x32/open_folder.png</iconset>
+   </property>
+   <property name="text">
+    <string>Scan Movies</string>
+   </property>
+   <property name="toolTip">
+    <string>Scan Shows</string>
+   </property>
+  </action>
+  <action name="actionMovies">
+   <property name="icon">
+    <iconset resource="../images/icons.qrc">
+     <normaloff>:/media/icons/fatcow/32x32/movies.png</normaloff>:/media/icons/fatcow/32x32/movies.png</iconset>
+   </property>
+   <property name="text">
+    <string>Switch to Movies</string>
+   </property>
+   <property name="toolTip">
+    <string>Movies</string>
+   </property>
+  </action>
+  <action name="actionTvShows">
+   <property name="icon">
+    <iconset resource="../images/icons.qrc">
+     <normaloff>:/media/icons/fatcow/32x32/television.png</normaloff>:/media/icons/fatcow/32x32/television.png</iconset>
+   </property>
+   <property name="text">
+    <string>Switch to Tv Shows</string>
+   </property>
+   <property name="toolTip">
+    <string>Tv Shows</string>
+   </property>
+  </action>
  </widget>
  <customwidgets>
   <customwidget>
    <class>ImageLabel</class>
    <extends>QLabel</extends>
-   <header>ImageLabel.h</header>
+   <header>ui.imagelabel.h</header>
   </customwidget>
  </customwidgets>
  <resources>
-  <include location="images/icons.qrc"/>
+  <include location="../images/icons.qrc"/>
  </resources>
  <connections>
   <connection>
