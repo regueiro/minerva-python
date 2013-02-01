@@ -3,7 +3,8 @@ Classes for storing media information
 
 """
 
-from art import tvshow
+from art.tvshow import TvShowArt
+from art.movie import MovieArt
 
 class TvShow:
     """
@@ -17,7 +18,7 @@ class TvShow:
         self.folder = ''
         self.tvdb_seasons = set()
         self.local_seasons = set()
-        self.art = tvshow.TvShowArt()
+        self.art = TvShowArt()
 
     def __repr__(self):
         return self.name +': '+self.id+'  '+self.art.__repr__()
@@ -36,6 +37,7 @@ class Movie:
         self.id = id
         self.name = name
         self.folder = ''
+        self.art = MovieArt()
 
     def __repr__(self):
         return self.name +': '+self.id

@@ -9,6 +9,7 @@ import re
 
 from mediamanager.media import TvShow, Movie
 from art.tvshow import TvShowArt
+from art.movie import MovieArt
 
 class FolderManager:
     """
@@ -218,6 +219,30 @@ class LocalArtworkManager:
         if season:
             return season.group(1).lstrip('0')
 
+    def find_local_movie_artwork(self, movie):
+        """
+        Scans the movie folder for artwork
+
+        Keyword arguments:
+        movie   -- the movie to scan
+        """
+
+        if os.path.exists(movie.folder):
+            art = MovieArt()
+
+            for file in os.listdir(movie.folder):
+                type = self.find_file_type(file)
+
+                filename = movie.folder + "\\" + file
+
+                if type == 'poster':
+                    art.poster = filename
+                if type == 'banner':
+                    art.banner = filename
+                if type == 'fanart':
+                    art.fanart = filename
+
+            movie.art = art
 
     def read_local_artwork(self, tvshow):
         """
