@@ -2,4 +2,8 @@
   <qresource prefix="scanIcon">
     <file>icons/fatcow/32x32/open_folder.png</file>
   </qresource>
+  <qresource prefix="media">
+    <file>icons/fatcow/32x32/movies.png</file>
+    <file>icons/fatcow/32x32/television.png</file>
+  </qresource>
 </RCC>
