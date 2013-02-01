@@ -37,3 +37,13 @@ nosetests.xml
 
 # Idea
 .idea
+
+# Sphinx
+_build
+_static
+_templates
+conf.py
+index.rst
+make.bat
+Makefile
+

@@ -1,7 +1,13 @@
+"""
+Classes for storing media information
+
+"""
+
 from art import tvshow
 
 class TvShow:
     """
+    Defines a tv show
 
     """
 
@@ -23,6 +29,7 @@ class TvShow:
 class Movie:
     """
     Defines a movie
+
     """
 
     def __init__(self, id, name):
