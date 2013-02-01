@@ -1,21 +1,19 @@
 #!usr/bin/env python
 """
+Minerva - An artwork manager for the XBMC Media Center
 
-        """
+Launches the Qt interface
+
+"""
 
 import sys
 
 from PySide import QtGui
 
 from ui.mainwindow import MainWindow
-from db.local import LocalDatabase
 
 
 if __name__ == '__main__':
-
-    localdb = LocalDatabase()
-    localdb.create_database()
-
     app = QtGui.QApplication(sys.argv)
     frame = MainWindow()
     frame.show()
