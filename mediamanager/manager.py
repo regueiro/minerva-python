@@ -228,7 +228,6 @@ class LocalArtworkManager:
         """
 
         if os.path.exists(movie.folder):
-            art = MovieArt()
 
             for file in os.listdir(movie.folder):
                 type = self.find_file_type(file)
@@ -236,13 +235,12 @@ class LocalArtworkManager:
                 filename = movie.folder + "\\" + file
 
                 if type == 'poster':
-                    art.poster = filename
+                    movie.art.poster = filename
                 if type == 'banner':
-                    art.banner = filename
+                    movie.art.banner = filename
                 if type == 'fanart':
-                    art.fanart = filename
+                    movie.art.fanart = filename
 
-            movie.art = art
 
     def read_local_artwork(self, tvshow):
         """
@@ -252,7 +250,6 @@ class LocalArtworkManager:
         tvshow  -- the tv show to scan
         """
         if os.path.exists(tvshow.folder):
-            art = TvShowArt()
 
             for file in os.listdir(tvshow.folder):
                 type = self.find_file_type(file)
@@ -260,43 +257,42 @@ class LocalArtworkManager:
                 filename = tvshow.folder + "\\" + file
 
                 if type == 'poster':
-                    art.poster = filename
+                    tvshow.art.poster = filename
                 if type == 'banner':
-                    art.banner = filename
+                    tvshow.art.banner = filename
                 if type == 'fanart':
-                    art.fanart = filename
+                    tvshow.art.fanart = filename
 
                 if type == 'season_poster':
                     season_number = self.find_season(file)
                     tvshow.local_seasons.add(season_number)
-                    art.season_poster[season_number] = filename
+                    tvshow.art.season_poster[season_number] = filename
                 if type == 'season_banner':
                     season_number = self.find_season(file)
                     tvshow.local_seasons.add(season_number)
-                    art.season_banner[season_number] = filename
+                    tvshow.art.season_banner[season_number] = filename
                 if type == 'season_fanart':
                     season_number = self.find_season(file)
                     tvshow.local_seasons.add(season_number)
-                    art.season_fanart[season_number] = filename
+                    tvshow.art.season_fanart[season_number] = filename
 
                 if type == 'season_all_poster':
-                    art.season_poster['all'] = filename
+                    tvshow.art.season_poster['all'] = filename
                 if type == 'season_all_banner':
-                    art.season_banner['all'] = filename
+                    tvshow.art.season_banner['all'] = filename
                 if type == 'season_all_fanart':
-                    art.season_fanart['all'] = filename
+                    tvshow.art.season_fanart['all'] = filename
 
                 if type == 'season_specials_poster':
                     tvshow.local_seasons.add('0')
-                    art.season_poster['specials'] = filename
+                    tvshow.art.season_poster['specials'] = filename
                 if type == 'season_specials_banner':
                     tvshow.local_seasons.add('0')
-                    art.season_banner['specials'] = filename
+                    tvshow.art.season_banner['specials'] = filename
                 if type == 'season_specials_fanart':
                     tvshow.local_seasons.add('0')
-                    art.season_fanart['specials'] = filename
+                    tvshow.art.season_fanart['specials'] = filename
 
-            tvshow.art = art
 
     def load_shows(self, showlist):
         """
