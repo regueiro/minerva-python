@@ -6,6 +6,7 @@ Functions for media management.
 import os
 import xml.etree.ElementTree as ET
 import re
+import shutil
 
 from mediamanager.media import TvShow, Movie
 from art.tvshow import TvShowArt
@@ -304,3 +305,164 @@ class LocalArtworkFinder:
         for show in showlist:
             self.read_local_artwork(show)
         return showlist
+
+class LocalArtworkSaver:
+    """
+    Saves artwork images
+
+    """
+
+    BACKUP_FOLDER = \
+        r"C:\Users\santi.REGUEIRO\Desarrollo\Python\Minerva\test\backup"
+    POSTER_FILENAME = 'poster'
+    BANNER_FILENAME = 'banner'
+    FANART_FILENAME = 'fanart'
+
+    def set_poster(self, media, new_poster_filename):
+        """
+        Copies the new poster to the movie/show folder
+
+        Stores the old poster in the backup folder indicated
+        
+        Keyword arguments:
+        media               -- the movie or tv show to update
+        new_poster_filename -- the full route to the new poster
+
+        """
+
+        if os.path.exists(new_poster_filename):
+            if (media.art.poster):
+
+                full_backup_name = self.BACKUP_FOLDER+'\\'+\
+                                   media.name+'-poster'+\
+                                   os.path.splitext(media.art.poster)[1]
+
+                while os.path.exists(full_backup_name):
+                    full_backup_name = self._add_ending_number_to_filename(full_backup_name)
+
+                shutil.copyfile(
+                    media.art.poster,
+                    full_backup_name
+                )
+
+
+                shutil.copyfile(new_poster_filename,media.art.poster)
+
+            else:
+                shutil.copyfile(
+                    new_poster_filename,
+                    media.folder+
+                    '\\'+
+                    self.poster_FILENAME+
+                    os.path.splitext(new_poster_filename)[1]
+                )
+
+    def set_banner(self, media, new_banner_filename):
+        """
+        Copies the new banner to the movie/show folder
+
+        Stores the old banner in the backup folder indicated
+        
+        Keyword arguments:
+        media               -- the movie or tv show to update
+        new_banner_filename -- the full route to the new banner
+
+        """
+
+        if os.path.exists(new_banner_filename):
+            if (media.art.banner):
+
+                full_backup_name = self.BACKUP_FOLDER+'\\'+\
+                                   media.name+'-banner'+\
+                                   os.path.splitext(media.art.banner)[1]
+
+                while os.path.exists(full_backup_name):
+                    full_backup_name = self._add_ending_number_to_filename(full_backup_name)
+
+                shutil.copyfile(
+                    media.art.banner,
+                    full_backup_name
+                )
+
+
+                shutil.copyfile(new_banner_filename,media.art.banner)
+
+            else:
+                shutil.copyfile(
+                    new_banner_filename,
+                    media.folder+
+                    '\\'+
+                    self.banner_FILENAME+
+                    os.path.splitext(new_banner_filename)[1]
+                )
+
+    def set_fanart(self, media, new_fanart_filename):
+        """
+        Copies the new fanart to the movie/show folder
+
+        Stores the old fanart in the backup folder indicated
+        
+        Keyword arguments:
+        media               -- the movie or tv show to update
+        new_fanart_filename -- the full route to the new fanart
+
+        """
+
+        if os.path.exists(new_fanart_filename):
+            if (media.art.fanart):
+
+                full_backup_name = self.BACKUP_FOLDER+'\\'+\
+                                   media.name+'-fanart'+\
+                                   os.path.splitext(media.art.fanart)[1]
+
+                while os.path.exists(full_backup_name):
+                    full_backup_name = self._add_ending_number_to_filename(full_backup_name)
+
+                shutil.copyfile(
+                    media.art.fanart,
+                    full_backup_name
+                )
+
+
+                shutil.copyfile(new_fanart_filename,media.art.fanart)
+
+            else:
+                shutil.copyfile(
+                    new_fanart_filename,
+                    media.folder+
+                        '\\'+
+                        self.FANART_FILENAME+
+                        os.path.splitext(new_fanart_filename)[1]
+                )
+
+
+    def _add_ending_number_to_filename(self,filename):
+        """
+        Returns the full file name with a trailing number
+
+        If there is a trailing number already present, add 1 to it and
+        return it
+
+        Keyword arguments:
+        filename    -- the file name to add a trailing number
+
+        """
+
+        file_name, ext = os.path.splitext(filename)
+
+        ending_number = re.search(
+            '^(.*)(poster|banner|fanart)-(.*?)'+ext,
+            filename
+        )
+
+        if ending_number:
+            number = ending_number.group(3)
+            next_number = int(number)+1
+            file_name = file_name[:-len(number)]
+
+            lent = len(number)
+
+            return file_name+str(next_number)+ext
+
+        else:
+            return file_name+'-1'+ext
