@@ -7,7 +7,7 @@ import os
 from PySide import QtGui
 from PySide import QtCore
 
-from mediamanager.manager import FolderManager, LocalArtworkManager
+from mediamanager.manager import FolderManager, LocalArtworkFinder
 from ui.ui_mainwindow import Ui_MainWindow
 
 
@@ -59,7 +59,7 @@ class MainWindow(QtGui.QMainWindow, Ui_MainWindow):
         showlist = folder_manager.tv_show_list
 
 
-        art_manager = LocalArtworkManager()
+        art_manager = LocalArtworkFinder()
         for show in showlist:
             art_manager.read_local_artwork(show)
 
@@ -83,7 +83,7 @@ class MainWindow(QtGui.QMainWindow, Ui_MainWindow):
         movie_list = folder_manager.movie_list
         contents = ShowList(movie_list)
 
-        art_manager = LocalArtworkManager()
+        art_manager = LocalArtworkFinder()
         for movie in movie_list:
             art_manager.find_local_movie_artwork(movie)
 

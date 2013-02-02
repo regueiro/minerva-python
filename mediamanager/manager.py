@@ -148,7 +148,7 @@ class FolderManager:
         return found_folders
 
 
-class LocalArtworkManager:
+class LocalArtworkFinder:
     """
     Finds local artwork for movies and tv shows
 
@@ -304,4 +304,3 @@ class LocalArtworkManager:
         for show in showlist:
             self.read_local_artwork(show)
         return showlist
-
